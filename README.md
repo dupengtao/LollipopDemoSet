@@ -6,4 +6,4 @@ LollipopDemoSet
 
 ###Dependencies
 ------
-[android-LNotificationse](https://github.com/googlesamples/android-LNotificationse)
+[android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
