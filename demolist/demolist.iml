@@ -89,6 +89,7 @@
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.0" level="project" />
     <orderEntry type="module" module-name="Application_LNotifications" exported="" />
     <orderEntry type="module" module-name="Application_AppRestrictionSchema" exported="" />
+    <orderEntry type="module" module-name="ElevationDragSample" exported="" />
     <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
     <orderEntry type="module" module-name="lollipopshowcase" exported="" />
   </component>
