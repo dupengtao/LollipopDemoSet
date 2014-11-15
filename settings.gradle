@@ -1,1 +1,1 @@
-include ':demolist',  ':Application_LNotifications'
+include ':demolist', ':Application_LNotifications', ':lollipopshowcase', ':Application_AppRestrictionSchema'

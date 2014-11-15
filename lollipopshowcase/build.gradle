@@ -1,0 +1,70 @@
+apply plugin: 'android-library'
+//wrap with try and catch so the build is working even if the signing stuff is missing
+try {
+    apply from: '../../../signing.gradle'
+} catch (ex) {
+}
+
+
+def appendVersionNameVersionCode(variant, defaultConfig) {
+    if (variant.zipAlign) {
+        def file = variant.outputFile
+        def fileName = file.name.replace(".apk", "-v" + defaultConfig.versionName + "-c" + defaultConfig.versionCode + ".apk")
+        variant.outputFile = new File(file.parent, fileName)
+    }
+
+    def file = variant.packageApplication.outputFile
+    def fileName = file.name.replace(".apk", "-v" + defaultConfig.versionName + "-c" + defaultConfig.versionCode + ".apk")
+    variant.packageApplication.outputFile = new File(file.parent, fileName)
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.2"
+    defaultConfig {
+        applicationId 'com.mikepenz.lollipopshowcase'
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 205
+        versionName "2.0.5"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-DEBUG"
+            try {
+                signingConfig signingConfigs.debug
+            } catch (ex) {
+            }
+            runProguard false
+        }
+        release {
+            try {
+                signingConfig signingConfigs.release
+            } catch (ex) {
+            }
+            zipAlign true
+            runProguard false
+        }
+
+//        applicationVariants.all { variant ->
+//            appendVersionNameVersionCode(variant, defaultConfig)
+//        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:support-v4:21.0.0"
+    compile "com.android.support:appcompat-v7:21.0.0"
+    compile 'com.android.support:recyclerview-v7:21.0.0'
+    compile 'com.android.support:cardview-v7:21.0.0'
+
+    compile 'com.nispok:snackbar:2.0.1'
+    compile 'com.joanzapata.android:android-iconify:1.0.6'
+
+    compile 'com.tundem.aboutlibraries:library:4.0.1@aar'
+}

@@ -47,6 +47,12 @@ public class DemoList extends Activity {
             public void onItemClick(View view, int position) {
                 switch (position){
                     case 0:{
+                        openActivity(com.mikepenz.lollipopshowcase.MainActivity.class);
+                    }break;
+                    case 1:{
+                        openActivity(com.example.android.apprestrictionschema.MainActivity.class);
+                    }break;
+                    case 2:{
                         openActivity(LNotificationActivity.class);
                     }break;
                 }
@@ -55,7 +61,9 @@ public class DemoList extends Activity {
     }
 
     private void addItems() {
-        mItems.add("LNotification");
+        mItems.add("LollipopShowcase");
+        mItems.add("AppRestrictionSchema");
+        mItems.add("LollipopShowcase");
     }
 
     private void openActivity(Class clazz) {
