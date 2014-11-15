@@ -6,7 +6,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.13.0'
     }
 }
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 repositories {
         jcenter()
@@ -17,7 +17,7 @@ android {
     buildToolsVersion "21.1.0"
 
     defaultConfig {
-        applicationId "com.dpt.demos"
+        applicationId "com.dpt.demos.base"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
@@ -29,19 +29,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    dexOptions {
-        preDexLibraries = false
-    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:21.0.0"
-    compile 'com.android.support:recyclerview-v7:21.0.0'
-    compile 'com.android.support:cardview-v7:21.0.0'
-    compile project(':Application_LNotifications')
-    compile project(':lollipopshowcase')
-    compile project(':Application_AppRestrictionSchema')
-    compile project(':Appication_ElevationBasicSample')
+    compile "com.android.support:support-v4:21.+"
+    compile "com.android.support:support-v13:20.+"
 }
