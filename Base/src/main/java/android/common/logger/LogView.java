@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.common.logger;
+package android.common.logger;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.*;
+import android.util.AttributeSet;
 import android.widget.TextView;
 
 /** Simple TextView which is used to output log data received through the LogNode interface.

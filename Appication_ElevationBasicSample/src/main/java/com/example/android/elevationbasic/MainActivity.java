@@ -14,7 +14,10 @@
 * limitations under the License.
 */
 
-package com.example.android.apprestrictionschema;
+
+
+
+package com.example.android.elevationbasic;
 
 import android.common.activities.SampleActivityBase;
 import android.common.logger.LogFragment;
@@ -46,14 +49,12 @@ public class MainActivity extends SampleActivityBase {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apprestrictionschema_main);
+        setContentView(R.layout.activity_elevationbasic_main);
 
-        if (savedInstanceState == null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            AppRestrictionSchemaFragment fragment = new AppRestrictionSchemaFragment();
-            transaction.replace(R.id.sample_content_fragment, fragment);
-            transaction.commit();
-        }
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        ElevationBasicFragment fragment = new ElevationBasicFragment();
+        transaction.replace(R.id.sample_content_fragment, fragment);
+        transaction.commit();
     }
 
     @Override

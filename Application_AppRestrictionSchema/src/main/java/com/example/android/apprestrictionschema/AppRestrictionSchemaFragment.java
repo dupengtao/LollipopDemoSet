@@ -21,6 +21,7 @@ import android.content.RestrictionsManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.common.logger.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.common.logger.Log;
+
 
 /**
  * Pressing the button on this fragment pops up a simple Toast message. The button is enabled or
