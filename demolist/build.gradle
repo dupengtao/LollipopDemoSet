@@ -45,4 +45,5 @@ dependencies {
     compile project(':Application_AppRestrictionSchema')
     compile project(':Appication_ElevationBasicSample')
     compile project(':ElevationDragSample')
+    compile project(':ClippingBasicSample')
 }

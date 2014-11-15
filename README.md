@@ -12,6 +12,8 @@ LollipopDemoSet
 
 [android-ElevationDrag](https://github.com/googlesamples/android-ElevationDrag)
 
+[android-ClippingBasic](https://github.com/googlesamples/android-ClippingBasic)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)
