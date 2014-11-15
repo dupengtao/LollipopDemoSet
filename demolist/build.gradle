@@ -44,4 +44,5 @@ dependencies {
     compile project(':lollipopshowcase')
     compile project(':Application_AppRestrictionSchema')
     compile project(':Appication_ElevationBasicSample')
+    compile project(':ElevationDragSample')
 }
