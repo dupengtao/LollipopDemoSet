@@ -14,6 +14,10 @@ LollipopDemoSet
 
 [android-ClippingBasic](https://github.com/googlesamples/android-ClippingBasic)
 
+[android-NavigationDrawer](https://github.com/googlesamples/android-NavigationDrawer)
+
+[android-FloatingActionButtonBasic](https://github.com/googlesamples/android-FloatingActionButtonBasic)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)

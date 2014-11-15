@@ -59,9 +59,15 @@ public class DemoList extends Activity {
                         openActivity(com.example.android.clippingbasic.MainActivity.class);
                     }break;
                     case 4:{
-                        openActivity(com.example.android.apprestrictionschema.MainActivity.class);
+                        openActivity(com.example.android.navigationdrawer.MainActivity.class);
                     }break;
                     case 5:{
+                        openActivity(com.example.android.floatingactionbuttonbasic.MainActivity.class);
+                    }break;
+                    case 6:{
+                        openActivity(com.example.android.apprestrictionschema.MainActivity.class);
+                    }break;
+                    case 7:{
                         openActivity(LNotificationActivity.class);
                     }break;
                 }
@@ -74,6 +80,8 @@ public class DemoList extends Activity {
         mItems.add("ElevationBasic");
         mItems.add("ElevationDrag");
         mItems.add("ClippingBasic");
+        mItems.add("NavigationDrawer");
+        mItems.add("FloatingActionButtonBasic");
         mItems.add("AppRestrictionSchema");
         mItems.add("LNotification");
     }
