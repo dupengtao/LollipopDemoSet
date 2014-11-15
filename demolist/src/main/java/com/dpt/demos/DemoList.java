@@ -1,17 +1,17 @@
 package com.dpt.demos;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 import com.dpt.demos.adapter.DemoListAdapter;
+import com.example.android.lnotifications.LNotificationActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class DemoList extends Activity {
@@ -19,6 +19,7 @@ public class DemoList extends Activity {
     private RecyclerView mRvList;
     private LinearLayoutManager mLinearLayoutManager;
     private DemoListAdapter mDemoListAdapter;
+    private ArrayList<String> mItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +34,33 @@ public class DemoList extends Activity {
         mLinearLayoutManager = new LinearLayoutManager(this);
         //mLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mRvList.setLayoutManager(mLinearLayoutManager);
-        List<String> items= new ArrayList<String>();
+        mItems= new ArrayList<String>();
+        addItems();
         for(int i=0;i<100;i++){
-            items.add("item_"+i);
+            mItems.add("item_"+i);
         }
-        mDemoListAdapter = new DemoListAdapter(items);
+        mDemoListAdapter = new DemoListAdapter(mItems);
         mRvList.setAdapter(mDemoListAdapter);
 
         mDemoListAdapter.setItemClickListener(new DemoListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(DemoList.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0:{
+                        openActivity(LNotificationActivity.class);
+                    }break;
+                }
             }
         });
+    }
+
+    private void addItems() {
+        mItems.add("LNotification");
+    }
+
+    private void openActivity(Class clazz) {
+        Intent intent = new Intent(this, clazz);
+        this.startActivity(intent);
     }
 
 
