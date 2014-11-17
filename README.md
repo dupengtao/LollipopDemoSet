@@ -22,7 +22,11 @@ LollipopDemoSet
 
 [android-RecyclerView](https://github.com/googlesamples/android-RecyclerView)
 
+[android-CardView](https://github.com/googlesamples/android-CardView)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
+
+[android-DrawableTinting](https://github.com/googlesamples/android-DrawableTinting)
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)
 

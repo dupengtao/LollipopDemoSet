@@ -50,4 +50,6 @@ dependencies {
     compile project(':RecyclerViewApplication')
     compile project(':FloatingActionButtonBasicSample')
     compile project(':RevealEffectBasicSample')
+    compile project(':CardViewApplication')
+    compile project(':DrawableTintingApplication')
 }
