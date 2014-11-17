@@ -18,7 +18,17 @@ LollipopDemoSet
 
 [android-FloatingActionButtonBasic](https://github.com/googlesamples/android-FloatingActionButtonBasic)
 
+[android-RevealEffectBasic](https://github.com/googlesamples/android-RevealEffectBasic)
+
+[android-RecyclerView](https://github.com/googlesamples/android-RecyclerView)
+
+[android-CardView](https://github.com/googlesamples/android-CardView)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
 
+[android-DrawableTinting](https://github.com/googlesamples/android-DrawableTinting)
+
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)
+
+[android-Interpolator](https://github.com/googlesamples/android-Interpolator)
 

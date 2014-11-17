@@ -47,5 +47,10 @@ dependencies {
     compile project(':ElevationDragSample')
     compile project(':ClippingBasicSample')
     compile project(':NavigationDrawerSample')
+    compile project(':RecyclerViewApplication')
     compile project(':FloatingActionButtonBasicSample')
+    compile project(':RevealEffectBasicSample')
+    compile project(':CardViewApplication')
+    compile project(':DrawableTintingApplication')
+    compile project(':InterpolatorApplication')
 }

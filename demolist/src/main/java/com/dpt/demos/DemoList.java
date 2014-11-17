@@ -65,10 +65,25 @@ public class DemoList extends Activity {
                         openActivity(com.example.android.floatingactionbuttonbasic.MainActivity.class);
                     }break;
                     case 6:{
-                        openActivity(com.example.android.apprestrictionschema.MainActivity.class);
+                        openActivity(com.example.android.revealeffectbasic.MainActivity.class);
                     }break;
                     case 7:{
+                        openActivity(com.example.android.recyclerview.MainActivity.class);
+                    }break;
+                    case 8:{
+                        openActivity(com.example.android.cardview.CardViewActivity.class);
+                    }break;
+                    case 9:{
+                        openActivity(com.example.android.drawabletinting.MainActivity.class);
+                    }break;
+                    case 10:{
+                        openActivity(com.example.android.apprestrictionschema.MainActivity.class);
+                    }break;
+                    case 11:{
                         openActivity(LNotificationActivity.class);
+                    }break;
+                    case 12:{
+                        openActivity(com.example.android.interpolator.MainActivity.class);
                     }break;
                 }
             }
@@ -82,8 +97,13 @@ public class DemoList extends Activity {
         mItems.add("ClippingBasic");
         mItems.add("NavigationDrawer");
         mItems.add("FloatingActionButtonBasic");
+        mItems.add("RevealEffectBasicSample");
+        mItems.add("RecyclerView");
+        mItems.add("CardView");
+        mItems.add("DrawableTinting");
         mItems.add("AppRestrictionSchema");
         mItems.add("LNotification");
+        mItems.add("Interpolator");
     }
 
     private void openActivity(Class clazz) {
