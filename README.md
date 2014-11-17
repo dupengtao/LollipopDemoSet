@@ -18,6 +18,8 @@ LollipopDemoSet
 
 [android-FloatingActionButtonBasic](https://github.com/googlesamples/android-FloatingActionButtonBasic)
 
+[android-RevealEffectBasic](https://github.com/googlesamples/android-RevealEffectBasic)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)

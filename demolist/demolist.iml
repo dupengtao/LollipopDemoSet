@@ -90,6 +90,7 @@
     <orderEntry type="module" module-name="Application_LNotifications" exported="" />
     <orderEntry type="module" module-name="NavigationDrawerSample" exported="" />
     <orderEntry type="module" module-name="ClippingBasicSample" exported="" />
+    <orderEntry type="module" module-name="RevealEffectBasicSample" exported="" />
     <orderEntry type="module" module-name="FloatingActionButtonBasicSample" exported="" />
     <orderEntry type="module" module-name="Application_AppRestrictionSchema" exported="" />
     <orderEntry type="module" module-name="ElevationDragSample" exported="" />
