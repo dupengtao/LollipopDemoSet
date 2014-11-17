@@ -52,4 +52,5 @@ dependencies {
     compile project(':RevealEffectBasicSample')
     compile project(':CardViewApplication')
     compile project(':DrawableTintingApplication')
+    compile project(':InterpolatorApplication')
 }

@@ -82,6 +82,9 @@ public class DemoList extends Activity {
                     case 11:{
                         openActivity(LNotificationActivity.class);
                     }break;
+                    case 12:{
+                        openActivity(com.example.android.interpolator.MainActivity.class);
+                    }break;
                 }
             }
         });
@@ -100,6 +103,7 @@ public class DemoList extends Activity {
         mItems.add("DrawableTinting");
         mItems.add("AppRestrictionSchema");
         mItems.add("LNotification");
+        mItems.add("Interpolator");
     }
 
     private void openActivity(Class clazz) {

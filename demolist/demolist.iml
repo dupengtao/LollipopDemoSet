@@ -89,15 +89,16 @@
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.0" level="project" />
     <orderEntry type="module" module-name="Application_LNotifications" exported="" />
     <orderEntry type="module" module-name="CardViewApplication" exported="" />
-    <orderEntry type="module" module-name="NavigationDrawerSample" exported="" />
     <orderEntry type="module" module-name="ClippingBasicSample" exported="" />
-    <orderEntry type="module" module-name="RevealEffectBasicSample" exported="" />
-    <orderEntry type="module" module-name="FloatingActionButtonBasicSample" exported="" />
     <orderEntry type="module" module-name="Application_AppRestrictionSchema" exported="" />
-    <orderEntry type="module" module-name="ElevationDragSample" exported="" />
-    <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
+    <orderEntry type="module" module-name="FloatingActionButtonBasicSample" exported="" />
     <orderEntry type="module" module-name="lollipopshowcase" exported="" />
-    <orderEntry type="module" module-name="DrawableTintingApplication" exported="" />
+    <orderEntry type="module" module-name="ElevationDragSample" exported="" />
+    <orderEntry type="module" module-name="NavigationDrawerSample" exported="" />
+    <orderEntry type="module" module-name="RevealEffectBasicSample" exported="" />
+    <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
+    <orderEntry type="module" module-name="InterpolatorApplication" exported="" />
     <orderEntry type="module" module-name="RecyclerViewApplication" exported="" />
+    <orderEntry type="module" module-name="DrawableTintingApplication" exported="" />
   </component>
 </module>

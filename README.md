@@ -30,3 +30,5 @@ LollipopDemoSet
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)
 
+[android-Interpolator](https://github.com/googlesamples/android-Interpolator)
+
