@@ -20,6 +20,8 @@ LollipopDemoSet
 
 [android-RevealEffectBasic](https://github.com/googlesamples/android-RevealEffectBasic)
 
+[android-RecyclerView](https://github.com/googlesamples/android-RecyclerView)
+
 [android-LNotificationse](https://github.com/googlesamples/android-LNotifications)
 
 [android-AppRestrictionSchema](https://github.com/googlesamples/android-AppRestrictionSchema)

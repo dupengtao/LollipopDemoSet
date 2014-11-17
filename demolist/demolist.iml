@@ -96,5 +96,6 @@
     <orderEntry type="module" module-name="ElevationDragSample" exported="" />
     <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
     <orderEntry type="module" module-name="lollipopshowcase" exported="" />
+    <orderEntry type="module" module-name="RecyclerViewApplication" exported="" />
   </component>
 </module>
