@@ -1,25 +1,29 @@
 package com.dpt.demos;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.*;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import com.dpt.demos.adapter.DemoAdapterItem;
 import com.dpt.demos.adapter.DemoListAdapter;
 import com.example.android.lnotifications.LNotificationActivity;
 
 import java.util.ArrayList;
 
 
-public class DemoList extends Activity {
+public class DemoList extends ActionBarActivity {
 
     private RecyclerView mRvList;
     private LinearLayoutManager mLinearLayoutManager;
     private DemoListAdapter mDemoListAdapter;
-    private ArrayList<String> mItems;
+    private ArrayList<DemoAdapterItem> mItems;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +33,22 @@ public class DemoList extends Activity {
     }
 
     private void initView() {
+
+        // Handle Toolbar
+        mToolbar = (Toolbar) findViewById(R.id.tb_list);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+
         mRvList=(RecyclerView)findViewById(R.id.rv_list);
         mRvList.setHasFixedSize(true);
         mLinearLayoutManager = new LinearLayoutManager(this);
+        mRvList.setItemAnimator(new DefaultItemAnimator());
         //mLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mRvList.setLayoutManager(mLinearLayoutManager);
-        mItems= new ArrayList<String>();
+        mItems= new ArrayList<DemoAdapterItem>();
         addItems();
         for(int i=0;i<100;i++){
-            mItems.add("item_"+i);
+            mItems.add(new DemoAdapterItem("item_"+i,R.drawable.ic_launcher));
         }
         mDemoListAdapter = new DemoListAdapter(mItems);
         mRvList.setAdapter(mDemoListAdapter);
@@ -85,25 +96,34 @@ public class DemoList extends Activity {
                     case 12:{
                         openActivity(com.example.android.interpolator.MainActivity.class);
                     }break;
+                    case 13:{
+                        CardView cardView = (CardView) view;
+                        cardView.setTransitionName("itemBox");
+                        animateActivity(cardView,cardView.getChildAt(1));
+                    }break;
                 }
             }
         });
     }
 
     private void addItems() {
-        mItems.add("LollipopShowcase");
-        mItems.add("ElevationBasic");
-        mItems.add("ElevationDrag");
-        mItems.add("ClippingBasic");
-        mItems.add("NavigationDrawer");
-        mItems.add("FloatingActionButtonBasic");
-        mItems.add("RevealEffectBasicSample");
-        mItems.add("RecyclerView");
-        mItems.add("CardView");
-        mItems.add("DrawableTinting");
-        mItems.add("AppRestrictionSchema");
-        mItems.add("LNotification");
-        mItems.add("Interpolator");
+
+
+        mItems.add(new DemoAdapterItem("LollipopShowcase",com.mikepenz.lollipopshowcase.R.drawable.ic_showcase));
+        mItems.add(new DemoAdapterItem("ElevationBasic",com.example.android.elevationbasic.R.drawable.ic_elevation_base));
+        mItems.add(new DemoAdapterItem("ElevationDrag",com.example.android.elevationdrag.R.drawable.ic_elevation_drag));
+        mItems.add(new DemoAdapterItem("ClippingBasic",com.example.android.clippingbasic.R.drawable.ic_clipping));
+
+        mItems.add(new DemoAdapterItem("NavigationDrawer",com.example.android.navigationdrawer.R.drawable.ic_navigation_drawer));
+        mItems.add(new DemoAdapterItem("FloatingActionButtonBasic",com.example.android.floatingactionbuttonbasic.R.drawable.ic_floating_action));
+        mItems.add(new DemoAdapterItem("RevealEffectBasicSample",com.example.android.revealeffectbasic.R.drawable.ic_reveal_effect));
+        mItems.add(new DemoAdapterItem("RecyclerView",com.example.android.recyclerview.R.drawable.ic_recycler));
+        mItems.add(new DemoAdapterItem("CardView",com.example.android.cardview.R.drawable.ic_cardview));
+        mItems.add(new DemoAdapterItem("DrawableTinting",com.example.android.drawabletinting.R.drawable.ic_drawable_tinting));
+        mItems.add(new DemoAdapterItem("AppRestrictionSchema",com.example.android.apprestrictionschema.R.drawable.ic_appres));
+        mItems.add(new DemoAdapterItem("LNotification",com.example.android.lnotifications.R.drawable.ic_l_notifications));
+        mItems.add(new DemoAdapterItem("Interpolator",com.example.android.interpolator.R.drawable.ic_interpolator));
+        mItems.add(new DemoAdapterItem("Customize Activity Transitions",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
@@ -132,5 +152,12 @@ public class DemoList extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void animateActivity(View v1,View v2){
+        Intent i = new Intent(this, DetailInfo.class);
+        i.putExtra("itemName","Customize Activity Transitions");
+        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, Pair.create(v1, "itemBox"),Pair.create(v2, "demoIcon"));
+        ActivityCompat.startActivity(this, i, transitionActivityOptions.toBundle());
     }
 }

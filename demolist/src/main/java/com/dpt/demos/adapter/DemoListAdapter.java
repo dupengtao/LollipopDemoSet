@@ -1,9 +1,11 @@
 package com.dpt.demos.adapter;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.dpt.demos.R;
 
@@ -15,26 +17,28 @@ import java.util.List;
  */
 public class DemoListAdapter extends RecyclerView.Adapter<DemoListAdapter.ViewHolder> {
 
-    private List<String> mDataSet;
+    private List<DemoAdapterItem> mDataSet;
     OnItemClickListener itemClickListener;
 
-    public DemoListAdapter(List<String> dataSet) {
-        mDataSet = dataSet == null ? new ArrayList<String>() : dataSet;
+    public DemoListAdapter(List<DemoAdapterItem> dataSet) {
+        mDataSet = dataSet == null ? new ArrayList<DemoAdapterItem>() : dataSet;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 
-        TextView tv = (TextView) LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.item_demo_list, viewGroup, false);
+        CardView cv = (CardView) LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_demo_list2, viewGroup, false);
         //TextView tv = (TextView)View.inflate(viewGroup.getContext(),R.layout.item_demo_list,null);
 
-        return new ViewHolder(tv);
+        return new ViewHolder(cv);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        viewHolder.mTv.setText(mDataSet.get(i));
+        DemoAdapterItem item = mDataSet.get(i);
+        viewHolder.setItemName(item.getAppName());
+        viewHolder.setImageRes(item.getAppResIcon());
     }
 
     @Override
@@ -45,13 +49,25 @@ public class DemoListAdapter extends RecyclerView.Adapter<DemoListAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private TextView mTv;
+        private CardView mCv;
+        private ImageView mIvDemoIcon;
+        private TextView mTvDemoName;
 
 
-        public ViewHolder(TextView itemView) {
+        public ViewHolder(CardView itemView) {
             super(itemView);
-            mTv = itemView;
-            mTv.setOnClickListener(this);
+            mCv = itemView;
+            mTvDemoName = (TextView) mCv.findViewById(R.id.tvDemoName);
+            mIvDemoIcon = (ImageView) mCv.findViewById(R.id.ivDemoIcon);
+            mCv.setOnClickListener(this);
+        }
+
+        public void setItemName(String text){
+            mTvDemoName.setText(text);
+        }
+
+        public void setImageRes(int resId){
+            mIvDemoIcon.setImageResource(resId);
         }
 
         @Override

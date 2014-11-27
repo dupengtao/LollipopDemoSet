@@ -96,8 +96,8 @@
     <orderEntry type="module" module-name="ElevationDragSample" exported="" />
     <orderEntry type="module" module-name="NavigationDrawerSample" exported="" />
     <orderEntry type="module" module-name="RevealEffectBasicSample" exported="" />
-    <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
     <orderEntry type="module" module-name="InterpolatorApplication" exported="" />
+    <orderEntry type="module" module-name="Appication_ElevationBasicSample" exported="" />
     <orderEntry type="module" module-name="RecyclerViewApplication" exported="" />
     <orderEntry type="module" module-name="DrawableTintingApplication" exported="" />
   </component>
