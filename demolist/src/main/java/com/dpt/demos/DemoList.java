@@ -12,6 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 import com.dpt.demos.adapter.DemoAdapterItem;
 import com.dpt.demos.adapter.DemoListAdapter;
+import com.dpt.demos.toolbar.ToolBarDemo;
+import com.dpt.demos.toolbar.ToolBarDemo2;
+import com.dpt.demos.toolbar.ToolBarDemo3;
+import com.dpt.demos.toolbar.ToolBarDemo4;
 import com.example.android.lnotifications.LNotificationActivity;
 
 import java.util.ArrayList;
@@ -101,6 +105,18 @@ public class DemoList extends ActionBarActivity {
                         cardView.setTransitionName("itemBox");
                         animateActivity(cardView,cardView.getChildAt(1));
                     }break;
+                    case 14:{
+                        openActivity(ToolBarDemo.class);
+                    }break;
+                    case 15:{
+                        openActivity(ToolBarDemo2.class);
+                    }break;
+                    case 16:{
+                        openActivity(ToolBarDemo3.class);
+                    }break;
+                    case 17:{
+                        openActivity(ToolBarDemo4.class);
+                    }break;
                 }
             }
         });
@@ -124,6 +140,10 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("LNotification",com.example.android.lnotifications.R.drawable.ic_l_notifications));
         mItems.add(new DemoAdapterItem("Interpolator",com.example.android.interpolator.R.drawable.ic_interpolator));
         mItems.add(new DemoAdapterItem("Customize Activity Transitions",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo4",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
