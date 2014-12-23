@@ -12,6 +12,9 @@ import android.view.MenuItem;
 import android.view.View;
 import com.dpt.demos.adapter.DemoAdapterItem;
 import com.dpt.demos.adapter.DemoListAdapter;
+import com.dpt.demos.recyclerview.GridLayoutActivity1;
+import com.dpt.demos.recyclerview.GridLayoutActivity2;
+import com.dpt.demos.recyclerview.GridLayoutActivity3;
 import com.dpt.demos.toolbar.ToolBarDemo;
 import com.dpt.demos.toolbar.ToolBarDemo2;
 import com.dpt.demos.toolbar.ToolBarDemo3;
@@ -117,6 +120,15 @@ public class DemoList extends ActionBarActivity {
                     case 17:{
                         openActivity(ToolBarDemo4.class);
                     }break;
+                    case 18:{
+                        openActivity(GridLayoutActivity1.class);
+                    }break;
+                    case 19:{
+                        openActivity(GridLayoutActivity2.class);
+                    }break;
+                    case 20:{
+                        openActivity(GridLayoutActivity3.class);
+                    }break;
                 }
             }
         });
@@ -144,6 +156,9 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("ToolBarDemo2",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("ToolBarDemo3",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("ToolBarDemo4",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView3",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
