@@ -22,16 +22,19 @@ public class ToolBarDemo4 extends ActionBarActivity {
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     toolbar.inflateMenu(R.menu.menu_toolbar);
     setSupportActionBar(toolbar);
-
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    getSupportActionBar().setHomeButtonEnabled(true);
+
+    //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     // 打開 up bottom
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
     // 實作 drawer toggle 並放入 toolbar
     mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
     mDrawerToggle.syncState();
+
 
     mDrawerLayout.setDrawerListener(mDrawerToggle);
   }

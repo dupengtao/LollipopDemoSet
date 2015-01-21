@@ -8,4 +8,11 @@
     <color name="light_blue_300">#4FC3F7</color>
     <color name="light_blue_500">#03A9F4</color>
     <color name="light_blue_900">#01579B</color>
+
+    <color name="green">#a3c639</color>
+    <color name="dark_green">#85a71d</color>
+    <color name="yellow">#ff0</color>
+    <color name="gray">#ccc</color>
+    <color name="pink">#e91e63</color>
+
 </resources>

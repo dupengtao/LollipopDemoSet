@@ -19,6 +19,7 @@ import com.dpt.demos.toolbar.ToolBarDemo;
 import com.dpt.demos.toolbar.ToolBarDemo2;
 import com.dpt.demos.toolbar.ToolBarDemo3;
 import com.dpt.demos.toolbar.ToolBarDemo4;
+import com.dpt.demos.vector.*;
 import com.example.android.lnotifications.LNotificationActivity;
 
 import java.util.ArrayList;
@@ -129,6 +130,21 @@ public class DemoList extends ActionBarActivity {
                     case 20:{
                         openActivity(GridLayoutActivity3.class);
                     }break;
+                    case 21:{
+                        openActivity(VectorActivity1.class);
+                    }break;
+                    case 22:{
+                        openActivity(AnimatedVectorDrawableActivity1.class);
+                    }break;
+                    case 23:{
+                        openActivity(AnimatedVectorDrawableActivity2.class);
+                    }break;
+                    case 24:{
+                        openActivity(AnimatedVectorDrawableActivity3.class);
+                    }break;
+                    case 25:{
+                        openActivity(VectorDrawablesActivity.class);
+                    }break;
                 }
             }
         });
@@ -159,6 +175,11 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("Grid layout with RecyclerView",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("Grid layout with RecyclerView2",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("Grid layout with RecyclerView3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Vector 1",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 1",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("VectorDrawablesActivity",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
