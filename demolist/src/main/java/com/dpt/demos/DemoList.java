@@ -12,6 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import com.dpt.demos.adapter.DemoAdapterItem;
 import com.dpt.demos.adapter.DemoListAdapter;
+import com.dpt.demos.recyclerview.GridLayoutActivity1;
+import com.dpt.demos.recyclerview.GridLayoutActivity2;
+import com.dpt.demos.recyclerview.GridLayoutActivity3;
+import com.dpt.demos.toolbar.ToolBarDemo;
+import com.dpt.demos.toolbar.ToolBarDemo2;
+import com.dpt.demos.toolbar.ToolBarDemo3;
+import com.dpt.demos.toolbar.ToolBarDemo4;
+import com.dpt.demos.vector.*;
 import com.example.android.lnotifications.LNotificationActivity;
 
 import java.util.ArrayList;
@@ -101,6 +109,42 @@ public class DemoList extends ActionBarActivity {
                         cardView.setTransitionName("itemBox");
                         animateActivity(cardView,cardView.getChildAt(1));
                     }break;
+                    case 14:{
+                        openActivity(ToolBarDemo.class);
+                    }break;
+                    case 15:{
+                        openActivity(ToolBarDemo2.class);
+                    }break;
+                    case 16:{
+                        openActivity(ToolBarDemo3.class);
+                    }break;
+                    case 17:{
+                        openActivity(ToolBarDemo4.class);
+                    }break;
+                    case 18:{
+                        openActivity(GridLayoutActivity1.class);
+                    }break;
+                    case 19:{
+                        openActivity(GridLayoutActivity2.class);
+                    }break;
+                    case 20:{
+                        openActivity(GridLayoutActivity3.class);
+                    }break;
+                    case 21:{
+                        openActivity(VectorActivity1.class);
+                    }break;
+                    case 22:{
+                        openActivity(AnimatedVectorDrawableActivity1.class);
+                    }break;
+                    case 23:{
+                        openActivity(AnimatedVectorDrawableActivity2.class);
+                    }break;
+                    case 24:{
+                        openActivity(AnimatedVectorDrawableActivity3.class);
+                    }break;
+                    case 25:{
+                        openActivity(VectorDrawablesActivity.class);
+                    }break;
                 }
             }
         });
@@ -124,6 +168,18 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("LNotification",com.example.android.lnotifications.R.drawable.ic_l_notifications));
         mItems.add(new DemoAdapterItem("Interpolator",com.example.android.interpolator.R.drawable.ic_interpolator));
         mItems.add(new DemoAdapterItem("Customize Activity Transitions",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("ToolBarDemo4",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Grid layout with RecyclerView3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Vector 1",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 1",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 2",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 3",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("VectorDrawablesActivity",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
