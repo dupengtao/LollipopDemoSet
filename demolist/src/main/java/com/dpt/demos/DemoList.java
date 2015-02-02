@@ -19,6 +19,7 @@ import com.dpt.demos.toolbar.ToolBarDemo;
 import com.dpt.demos.toolbar.ToolBarDemo2;
 import com.dpt.demos.toolbar.ToolBarDemo3;
 import com.dpt.demos.toolbar.ToolBarDemo4;
+import com.dpt.demos.transition.OneActivity;
 import com.dpt.demos.vector.*;
 import com.example.android.lnotifications.LNotificationActivity;
 
@@ -145,6 +146,9 @@ public class DemoList extends ActionBarActivity {
                     case 25:{
                         openActivity(VectorDrawablesActivity.class);
                     }break;
+                    case 26:{
+                        openActivity(OneActivity.class);
+                    }break;
                 }
             }
         });
@@ -180,6 +184,7 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 2",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 3",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("VectorDrawablesActivity",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Transitions Activity",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
