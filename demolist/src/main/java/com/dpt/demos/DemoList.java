@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import com.dpt.demos.adapter.DemoAdapterItem;
 import com.dpt.demos.adapter.DemoListAdapter;
+import com.dpt.demos.overlay.OverlayTestActivity;
 import com.dpt.demos.recyclerview.GridLayoutActivity1;
 import com.dpt.demos.recyclerview.GridLayoutActivity2;
 import com.dpt.demos.recyclerview.GridLayoutActivity3;
@@ -149,6 +150,9 @@ public class DemoList extends ActionBarActivity {
                     case 26:{
                         openActivity(OneActivity.class);
                     }break;
+                    case 27:{
+                        openActivity(OverlayTestActivity.class);
+                    }break;
                 }
             }
         });
@@ -185,6 +189,7 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 3",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("VectorDrawablesActivity",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("Transitions Activity",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("Overlay Test Activity",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
