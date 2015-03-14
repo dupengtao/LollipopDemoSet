@@ -153,6 +153,12 @@ public class DemoList extends ActionBarActivity {
                     case 27:{
                         openActivity(OverlayTestActivity.class);
                     }break;
+                    case 28:{
+                        openActivity(AnimatedVectorDrawableActivity4.class);
+                    }break;
+                    case 29:{
+                        openActivity(AnimatedVectorDrawableActivity5.class);
+                    }break;
                 }
             }
         });
@@ -190,6 +196,8 @@ public class DemoList extends ActionBarActivity {
         mItems.add(new DemoAdapterItem("VectorDrawablesActivity",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("Transitions Activity",R.drawable.ic_launcher));
         mItems.add(new DemoAdapterItem("Overlay Test Activity",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 4",R.drawable.ic_launcher));
+        mItems.add(new DemoAdapterItem("AnimatedVectorDrawable 5",R.drawable.ic_launcher));
     }
 
     private void openActivity(Class clazz) {
