@@ -101,6 +101,11 @@
                 android:label="@string/app_name"
                 android:theme="@style/AppBaseTheme_1">
         </activity>
+        <activity
+                android:name=".vector.AnimatedVectorDrawableActivity5"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme99">
+        </activity>
     </application>
 
 </manifest>
