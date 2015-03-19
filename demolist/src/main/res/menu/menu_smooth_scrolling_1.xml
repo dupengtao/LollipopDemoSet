@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_top"
+        android:icon="@drawable/menu_up"
+        android:showAsAction="ifRoom"
+        android:title="@string/to_top" />
+
+    <item
+        android:id="@+id/action_bottom"
+        android:icon="@drawable/menu_down"
+        android:showAsAction="ifRoom"
+        android:title="@string/to_bottom" />
+
+</menu>
