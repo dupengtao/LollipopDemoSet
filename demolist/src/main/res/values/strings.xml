@@ -21,4 +21,7 @@
     a 48,48 0 1,0 96,0
     a 48,48 0 1,0 -96,0
   </string>
+    <string name="to_top">To Top</string>
+    <string name="to_bottom">To Bottom</string>
+    <string name="item_string">Item %1$d</string>
 </resources>
